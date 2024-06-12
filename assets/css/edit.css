@@ -1,0 +1,139 @@
+main{
+	height: 90vh;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 65% 30%;
+	overflow-y: hidden;
+	background: rgb(61,32,5);
+	background: -moz-linear-gradient(90deg, rgba(61,32,5,1) 0%, rgba(255,130,19,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(61,32,5,1) 0%, rgba(255,130,19,1) 100%);
+	background: linear-gradient(90deg, rgba(61,32,5,1) 0%, rgba(255,130,19,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d2005",endColorstr="#ff8213",GradientType=1);
+}
+
+main > *{
+	z-index: 1;
+}
+
+.background{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0vh;
+	z-index: 0;
+	opacity: 0.2;
+}
+
+
+#image, #title{
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.product{
+	display: grid;
+	height: 70vh;
+	width: 30vw;
+	grid-template-rows: 70% 15% 15%;
+	grid-template-columns: 50% 50%;
+	background-color: black;
+	color: white;
+	position: relative;
+	box-shadow: 10px 10px 31px 1px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 10px 10px 31px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 31px 1px rgba(0,0,0,0.75);
+	margin: auto 0;
+	margin-left: auto;
+	margin-right: 5%;
+	border-radius: 20px;
+}
+
+.product::after{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: url("../svg/background.svg");
+	z-index: -1;
+	opacity: 0.3;
+	border-radius: 20px;
+
+}
+
+.product input{
+	width: 60%;
+	height: 50%;
+	border-radius: 15px;
+	margin: auto;
+	border: 1px solid black;
+}
+
+.product img{
+	margin: auto;
+	height: 20vw;
+	width: 20vw;
+	border-radius: 15px;
+	position: relative;
+	cursor: pointer;
+	z-index: 0;
+	background-color: white;
+}
+
+.product img::after{
+	content: " ";
+	position: absolute;
+	width: 2.5vw;
+	height: 2.5vw;
+	background-image: url("../svg/image.svg");
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: center;
+	padding: 5%;
+	box-sizing: border-box;
+	border-radius: 10px;
+	cursor: pointer;
+	z-index: 1;
+	right: 1vw;
+	top: 1vw;
+}
+
+.functions{
+	width: 10vw;
+	height: 70vh;
+	background-color: black;
+	margin: auto 0 ;
+	margin-right: auto;
+	margin-left: 5%;
+	border-radius: 15px;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	align-items: center;
+}
+
+.function-button{
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: white;
+	width: 80%;
+	height: 20%;
+	margin: auto;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 5px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.function-button button{
+	border: 0;
+}
+
+.function-button svg{
+	width: 100%;
+	height: 100%;
+}
+
+#file{
+	position: absolute;
+	visibility: hidden;
+}

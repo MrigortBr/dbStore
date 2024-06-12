@@ -1,0 +1,46 @@
+# Ignorar arquivos de backup do sistema
+*.bak
+*.backup
+*.swp
+
+# Ignorar diretórios de cache do sistema
+/application/cache/*
+/application/logs/*
+
+# Ignorar diretórios de cache do CodeIgniter
+/system/cache/*
+
+# Ignorar arquivos de configuração específicos do ambiente
+/application/config/development/*
+/application/config/production/*
+/application/config/testing/*
+
+# Ignorar diretórios de uploads, se aplicável
+/public/uploads/*
+
+# Ignorar diretórios de dependências do Composer
+/vendor/
+
+# Ignorar arquivos gerados automaticamente pelo Composer
+composer.lock
+composer.phar
+
+# Ignorar arquivos específicos do ambiente de desenvolvimento
+.env
+
+# Ignorar IDEs e editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignorar arquivos temporários do sistema
+*.tmp
+*.temp
+
+# Ignorar logs do sistema
+*.log
+
+# Ignorar arquivos e diretórios específicos do sistema operacional
+.DS_Store
+Thumbs.db
